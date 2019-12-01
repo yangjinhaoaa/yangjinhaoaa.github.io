@@ -10,20 +10,20 @@
   <meta name="description" content="stm32的闪灯实验 材料:开发板NUCLEO-G071RB,软件:MDK-v5(ARM),stm32cubemx  Task:使板上的灯LD4闪烁1.使用stm32cubemx配置引脚 新建project并选择MPU选择stm32G071RB   找到pinout&amp;amp;config里选择PA5点击并选择GPIO_OUT(我们的led灯就在这里)  接下来点击生成代码,进入keil界面改程序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[stm32]stm32基础-blink">
-<meta property="og:url" content="https:&#x2F;&#x2F;iot-me.club&#x2F;2019&#x2F;11&#x2F;08&#x2F;2019_11_8blog1&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;iot-me.club&#x2F;2019&#x2F;11&#x2F;08&#x2F;2019_11_8blog1&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="stm32的闪灯实验 材料:开发板NUCLEO-G071RB,软件:MDK-v5(ARM),stm32cubemx  Task:使板上的灯LD4闪烁1.使用stm32cubemx配置引脚 新建project并选择MPU选择stm32G071RB   找到pinout&amp;amp;config里选择PA5点击并选择GPIO_OUT(我们的led灯就在这里)  接下来点击生成代码,进入keil界面改程序">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-08_20-43-48.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-08_20-48-36.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-13_22-41-17.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-13_22-42-05.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-13_22-50-17.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-13_22-51-24.jpg">
-<meta property="og:image" content="https:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-13_22-49-52.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-08_20-43-48.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-08_20-48-36.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-13_22-41-17.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-13_22-42-05.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-13_22-50-17.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-13_22-51-24.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-13_22-49-52.jpg">
 <meta property="og:updated_time" content="2019-11-13T15:16:56.684Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-08_20-43-48.jpg">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;iot-me.club&#x2F;images&#x2F;Snipaste_2019-11-08_20-43-48.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,7 +64,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://iot-me.club"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://iot-me.club"></form>
       </div>
     </div>
   </div>
@@ -118,7 +118,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://iot-me.club/2019/11/08/2019_11_8blog1/" data-id="ck3n038r8000suwvt7y7o4o0m" class="article-share-link">Share</a>
+      <a data-url="http://iot-me.club/2019/11/08/2019_11_8blog1/" data-id="ck3n0hkq3000s20vt2w1phktp" class="article-share-link">Share</a>
       
       
     </footer>
