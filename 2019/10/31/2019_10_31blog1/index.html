@@ -5,17 +5,19 @@
   
 
   
-  <title>Hello World | Hexo</title>
+  <title>[Android]去除app标题栏 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="有时候觉得这个默认的标题栏很碍事 ,没什么用还占用了大部分屏幕空间 该怎么去除呢?第一种方法将res&#x2F;value下的style文件中的DarkActionBar改为NoActionBar就可以了,如下: 1&amp;lt;style name&#x3D;&quot;AppTheme&quot; parent&#x3D;&quot;Theme.AppCompat.Light.DarkActionBar&quot;&amp;gt; 改成 1&amp;lt;style name&#x3D;&quot;Ap">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https:&#x2F;&#x2F;iot-me.club&#x2F;2019&#x2F;12&#x2F;01&#x2F;hello-world&#x2F;index.html">
+<meta property="og:title" content="[Android]去除app标题栏">
+<meta property="og:url" content="https:&#x2F;&#x2F;iot-me.club&#x2F;2019&#x2F;10&#x2F;31&#x2F;2019_10_31blog1&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="有时候觉得这个默认的标题栏很碍事 ,没什么用还占用了大部分屏幕空间 该怎么去除呢?第一种方法将res&#x2F;value下的style文件中的DarkActionBar改为NoActionBar就可以了,如下: 1&amp;lt;style name&#x3D;&quot;AppTheme&quot; parent&#x3D;&quot;Theme.AppCompat.Light.DarkActionBar&quot;&amp;gt; 改成 1&amp;lt;style name&#x3D;&quot;Ap">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-01T10:36:12.070Z">
+<meta property="og:image" content="k:%5Cblog%5Cmyblog%5Cstatic%5Cimages%5C1572519883437.png">
+<meta property="og:updated_time" content="2019-11-04T14:46:41.210Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="k:%5Cblog%5Cmyblog%5Cstatic%5Cimages%5C1572519883437.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -62,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-2019_10_31blog1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/12/01/hello-world/" class="article-date">
-  <time datetime="2019-12-01T10:36:12.069Z" itemprop="datePublished">2019-12-01</time>
+    <a href="/2019/10/31/2019_10_31blog1/" class="article-date">
+  <time datetime="2019-10-31T03:01:54.000Z" itemprop="datePublished">2019-10-31</time>
 </a>
     
   </div>
@@ -76,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      [Android]去除app标题栏
     </h1>
   
 
@@ -84,24 +86,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure>
+        <h2 id="有时候觉得这个默认的标题栏很碍事-没什么用还占用了大部分屏幕空间"><a href="#有时候觉得这个默认的标题栏很碍事-没什么用还占用了大部分屏幕空间" class="headerlink" title="有时候觉得这个默认的标题栏很碍事 ,没什么用还占用了大部分屏幕空间"></a>有时候觉得这个默认的标题栏很碍事 ,没什么用还占用了大部分屏幕空间</h2><p><img src="K:%5Cblog%5Cmyblog%5Cstatic%5Cimages%5C1572519883437.png" alt="1572519883437"></p>
+<h3 id="该怎么去除呢"><a href="#该怎么去除呢" class="headerlink" title="该怎么去除呢?"></a>该怎么去除呢?</h3><h4 id="第一种方法"><a href="#第一种方法" class="headerlink" title="第一种方法"></a>第一种方法</h4><p>将res/value下的style文件中的DarkActionBar改为NoActionBar就可以了,如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">"AppTheme"</span> <span class="attr">parent</span>=<span class="string">"Theme.AppCompat.Light.DarkActionBar"</span>&gt;</span></span></pre></td></tr></table></figure>
+<p>改成</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span>=<span class="string">"AppTheme"</span> <span class="attr">parent</span>=<span class="string">"Theme.AppCompat.Light.NoActionBar"</span>&gt;</span></span></pre></td></tr></table></figure>
+<h4 id="二"><a href="#二" class="headerlink" title="二"></a>二</h4><p>检查Java中</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;.....&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">将其中的将extends AppCompatActivity继承改成extends Activity</span></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo generate</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://iot-me.club/2019/12/01/hello-world/" data-id="ck3n038rs000zuwvtazo0fj7d" class="article-share-link">Share</a>
+      <a data-url="https://iot-me.club/2019/10/31/2019_10_31blog1/" data-id="ck3n038qx000huwvt86ad4q3q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -110,10 +107,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2019/11/02/2019_11_2blog1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          [Android]java代码中的@Override符号意义
+        
+      </div>
+    </a>
   
-    <a href="/2019/11/20/2019_11_20blog2/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2019/10/22/2019_10_22blog2/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">PCM编码</div>
+      <div class="article-nav-title">[Android]监听器使用</div>
     </a>
   
 </nav>

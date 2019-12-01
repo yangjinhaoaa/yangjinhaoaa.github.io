@@ -5,16 +5,16 @@
   
 
   
-  <title>Hello World | Hexo</title>
+  <title>[Android]app调用系统时间 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="获取年月日获取时分秒获取星期几1int week&#x3D;0;2final Calendar c &#x3D; Calendar.getInstance();3week &#x3D; (c.get(Calendar.DAY_OF_WEEK));4if(week&#x3D;&#x3D;0)&amp;#123;5    textview.setText(&quot;星期六&quot;);6&amp;#125;7if(week&#x3D;&#x3D;1)&amp;#123;8    textview.setTex">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https:&#x2F;&#x2F;iot-me.club&#x2F;2019&#x2F;12&#x2F;01&#x2F;hello-world&#x2F;index.html">
+<meta property="og:title" content="[Android]app调用系统时间">
+<meta property="og:url" content="https:&#x2F;&#x2F;iot-me.club&#x2F;2019&#x2F;11&#x2F;13&#x2F;2019_11_13blog1&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="获取年月日获取时分秒获取星期几1int week&#x3D;0;2final Calendar c &#x3D; Calendar.getInstance();3week &#x3D; (c.get(Calendar.DAY_OF_WEEK));4if(week&#x3D;&#x3D;0)&amp;#123;5    textview.setText(&quot;星期六&quot;);6&amp;#125;7if(week&#x3D;&#x3D;1)&amp;#123;8    textview.setTex">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-01T10:36:12.070Z">
+<meta property="og:updated_time" content="2019-11-15T11:01:56.985Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -62,10 +62,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-2019_11_13blog1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/12/01/hello-world/" class="article-date">
-  <time datetime="2019-12-01T10:36:12.069Z" itemprop="datePublished">2019-12-01</time>
+    <a href="/2019/11/13/2019_11_13blog1/" class="article-date">
+  <time datetime="2019-11-13T07:05:59.000Z" itemprop="datePublished">2019-11-13</time>
 </a>
     
   </div>
@@ -76,7 +76,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      [Android]app调用系统时间
     </h1>
   
 
@@ -84,24 +84,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo generate</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <h3 id="获取年月日"><a href="#获取年月日" class="headerlink" title="获取年月日"></a>获取年月日</h3><h3 id="获取时分秒"><a href="#获取时分秒" class="headerlink" title="获取时分秒"></a>获取时分秒</h3><h3 id="获取星期几"><a href="#获取星期几" class="headerlink" title="获取星期几"></a>获取星期几</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> week=<span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> Calendar c = Calendar.getInstance();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">week = (c.get(Calendar.DAY_OF_WEEK));</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(week==<span class="number">0</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    textview.setText(<span class="string">"星期六"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(week==<span class="number">1</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    textview.setText(<span class="string">"星期日"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(week==<span class="number">2</span>)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    textview.setText(<span class="string">"星期一"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//……………………</span></span></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://iot-me.club/2019/12/01/hello-world/" data-id="ck3n038rs000zuwvtazo0fj7d" class="article-share-link">Share</a>
+      <a data-url="https://iot-me.club/2019/11/13/2019_11_13blog1/" data-id="ck3n038r1000luwvtb6kz1avw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -110,10 +97,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2019/11/19/2019_11_19blog1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          [stm32]串口通信printf
+        
+      </div>
+    </a>
   
-    <a href="/2019/11/20/2019_11_20blog2/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2019/11/11/2019_11_11blog1/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">PCM编码</div>
+      <div class="article-nav-title">[黑苹果]把黑果硬盘的UEFI分区挂载到当前系统</div>
     </a>
   
 </nav>
