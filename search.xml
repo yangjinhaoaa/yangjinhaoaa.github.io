@@ -16,6 +16,12 @@
       <content type="html"><![CDATA[<h3 id="A律十三折线编码"><a href="#A律十三折线编码" class="headerlink" title="A律十三折线编码"></a>A律十三折线编码</h3><h4 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h4><ul><li><p>按照A率十三折编码规范每个样值编为8bit二进制数据</p></li><li><p>采样率8KHz</p></li><li><p>小信号更细大信号更粗</p><h4 id="极性码"><a href="#极性码" class="headerlink" title="极性码"></a>极性码</h4><p>正数是1,</p><h4 id="段落码"><a href="#段落码" class="headerlink" title="段落码"></a>段落码</h4><p>c2,c3,c4 </p><table><thead><tr><th align="center">区间</th><th align="center">c2,c3,c4</th></tr></thead><tbody><tr><td align="center">0</td><td align="center">000</td></tr><tr><td align="center">32</td><td align="center">001</td></tr><tr><td align="center">64</td><td align="center">010</td></tr><tr><td align="center">128</td><td align="center">011</td></tr><tr><td align="center">256</td><td align="center">100</td></tr><tr><td align="center">512</td><td align="center">101</td></tr><tr><td align="center">1024</td><td align="center">110</td></tr><tr><td align="center">2048</td><td align="center">111</td></tr><tr><td align="center">4096</td><td align="center">—-</td></tr></tbody></table></li></ul><p>按照大于X取X</p>]]></content>
       
       
+        <tags>
+            
+            <tag> 通信 </tag>
+            
+        </tags>
+      
     </entry>
     
     <entry>
