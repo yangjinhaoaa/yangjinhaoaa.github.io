@@ -127,6 +127,54 @@
 	   
 	<div class="article-header">
 	    
+		<a class="title" href="/2019/11/02/2019_11_2blog1/">[Android]java代码中的@Override符号意义</a>  
+	       
+		 
+
+		<div class="meta">
+			<time>Nov 02, 2019</time>			
+		</div>
+	</div>
+
+
+	
+
+    
+	<div class="typo article-excerpt">	
+		 
+			<h3 id="Override是伪代码-表示重写。"><a href="#Override是伪代码-表示重写。" class="headerlink" title="@Override是伪代码,表示重写。"></a>@Override是伪代码,表示重写。</h3><h4 id="带着这个符号之后-编译器可以给你验证-Override下面的方法名是否是你父类中所有的，如果没有则报错"><a href="#带着这个符号之后-编译器可以给你验证-Override下面的方法名是否是你父类中所有的，如果没有则报错" class="headerlink" title="带着这个符号之后,编译器可以给你验证@Override下面的方法名是否是你父类中所有的，如果没有则报错."></a>带着这个符号之后,编译器可以给你验证@Override下面的方法名是否是你父类中所有的，如果没有则报错.</h4><p>Android开发中经常看到下面的代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;    </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">      <span class="keyword">super</span>.onCreate(savedInstanceState);     </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">      setContentView(R.layout.activity_main); </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  &#125;</span></pre></td></tr></table></figure>
+<p>如果上面的代码我写了@Override,而下面写成了protect void oncreate这时编译器就会报错<br>然而,如果上面的代码我没加@Override下面写成了protect void oncreate编译器就不会报错.</p>
+<h3 id="Override可以起到注释和代码检查的作用"><a href="#Override可以起到注释和代码检查的作用" class="headerlink" title="Override可以起到注释和代码检查的作用."></a>Override可以起到注释和代码检查的作用.</h3><h3 id="END"><a href="#END" class="headerlink" title="END"></a>END</h3>
+		  	  
+	</div>
+
+
+
+	<div class="article-categories">
+	 
+	</div>
+	
+
+	<div class="article-tags">
+		
+	</div>
+
+	<div class="article-bottom">
+		<a class="readmore" href="/2019/11/02/2019_11_2blog1/">Continue</a> 	
+	</div>	
+    
+</article>
+
+	
+	
+	
+	
+
+<article class="article">		
+	   
+	<div class="article-header">
+	    
 		<a class="title" href="/2019/10/31/2019_10_31blog1/">[Android]去除app标题栏</a>  
 	       
 		 
@@ -606,56 +654,6 @@
 
 	
 	
-	
-	
-
-<article class="article">		
-	   
-	<div class="article-header">
-	    
-		<a class="title" href="/2019/10/15/2019_10_15blog3/">[Android]设置view控件的可见性</a>  
-	       
-		 
-
-		<div class="meta">
-			<time>Oct 15, 2019</time>			
-		</div>
-	</div>
-
-
-	
-
-    
-	<div class="typo article-excerpt">	
-		 
-			<h4 id="可见（visible"><a href="#可见（visible" class="headerlink" title="可见（visible)"></a>可见（visible)</h4><p>XML文件：android:visibility=”visible”</p>
-<p>Java代码：view.setVisibility(View.VISIBLE);</p>
-<h4 id="不可见（invisible）"><a href="#不可见（invisible）" class="headerlink" title="不可见（invisible）"></a>不可见（invisible）</h4><p>XML文件：android:visibility=”invisible”</p>
-<p>Java代码：view.setVisibility(View.INVISIBLE);</p>
-<h4 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h4><p>隐藏控件,将当前控件从layout中隐藏,如果是线性布局 则将此控件下方控件上移.</p>
-<h4 id="END"><a href="#END" class="headerlink" title="END"></a>END</h4>
-		  	  
-	</div>
-
-
-
-	<div class="article-categories">
-	 
-	</div>
-	
-
-	<div class="article-tags">
-		
-	</div>
-
-	<div class="article-bottom">
-		<a class="readmore" href="/2019/10/15/2019_10_15blog3/">Continue</a> 	
-	</div>	
-    
-</article>
-
-	
-	
 
 	
 	
@@ -668,7 +666,7 @@
         </a>
     
 
-   <span class="page-number"> Page <strong>2</strong>, Posts <strong>36</strong>. </span>
+   <span class="page-number"> Page <strong>2</strong>, Posts <strong>37</strong>. </span>
 
     
         <a class="next" href="/page/3/"> 

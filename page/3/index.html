@@ -127,6 +127,56 @@
 	   
 	<div class="article-header">
 	    
+		<a class="title" href="/2019/10/15/2019_10_15blog3/">[Android]设置view控件的可见性</a>  
+	       
+		 
+
+		<div class="meta">
+			<time>Oct 15, 2019</time>			
+		</div>
+	</div>
+
+
+	
+
+    
+	<div class="typo article-excerpt">	
+		 
+			<h4 id="可见（visible"><a href="#可见（visible" class="headerlink" title="可见（visible)"></a>可见（visible)</h4><p>XML文件：android:visibility=”visible”</p>
+<p>Java代码：view.setVisibility(View.VISIBLE);</p>
+<h4 id="不可见（invisible）"><a href="#不可见（invisible）" class="headerlink" title="不可见（invisible）"></a>不可见（invisible）</h4><p>XML文件：android:visibility=”invisible”</p>
+<p>Java代码：view.setVisibility(View.INVISIBLE);</p>
+<h4 id="隐藏"><a href="#隐藏" class="headerlink" title="隐藏"></a>隐藏</h4><p>隐藏控件,将当前控件从layout中隐藏,如果是线性布局 则将此控件下方控件上移.</p>
+<h4 id="END"><a href="#END" class="headerlink" title="END"></a>END</h4>
+		  	  
+	</div>
+
+
+
+	<div class="article-categories">
+	 
+	</div>
+	
+
+	<div class="article-tags">
+		
+	</div>
+
+	<div class="article-bottom">
+		<a class="readmore" href="/2019/10/15/2019_10_15blog3/">Continue</a> 	
+	</div>	
+    
+</article>
+
+	
+	
+	
+	
+
+<article class="article">		
+	   
+	<div class="article-header">
+	    
 		<a class="title" href="/2019/10/15/2019_10_15blog2/">[Android]点击多次按钮产生不同的响应</a>  
 	       
 		 
@@ -606,70 +656,6 @@ Mammalnt.java文件<pre><code class="java"><span class="keyword">public</span> <
 
 	
 	
-	
-	
-
-<article class="article">		
-	   
-	<div class="article-header">
-	    
-		<a class="title" href="/2019/10/08/2019_10_8blog1/">Java面向对象特性</a>  
-	       
-		 
-
-		<div class="meta">
-			<time>Oct 08, 2019</time>			
-		</div>
-	</div>
-
-
-	
-
-    
-	<div class="typo article-excerpt">	
-		 
-			<h2 id="Java面向对象特性"><a href="#Java面向对象特性" class="headerlink" title="Java面向对象特性"></a>Java面向对象特性</h2><h3 id="1-封装性"><a href="#1-封装性" class="headerlink" title="1.封装性"></a>1.封装性</h3><p>Java中把对象的各个属性组合成一个独立单位<br> 修饰符:</p>
-<ol>
-<li>default (即默认，什么也不写）: 在同一包内可见，不使用任何修饰符。使用对象：类、接口、变量、方法。</li>
-<li>private : 在同一类内可见。使用对象：变量、方法。 注意：不能修饰类（外部类）</li>
-<li>public : 对所有类可见。使用对象：类、接口、变量、方法</li>
-<li>protected : 对同一包内的类和所有子类可见。使用对象：变量、方法。 注意：不能修饰类（外部类）。</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Aclass</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">output</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">		System.out.println(<span class="string">"class father"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">privateoutput</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">		System.out.println(<span class="string">"class私有方法"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getprivateoutput</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">		privateoutput();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">classfeature</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">		Aclass father1 = <span class="keyword">new</span> Aclass();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">		father1.output();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">		father1.getprivateoutput();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-<h3 id="2-继承性"><a href="#2-继承性" class="headerlink" title="2. 继承性"></a>2. 继承性</h3><ol>
-<li>子类拥有父类非 private 的属性、方法。</li>
-<li>子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。</li>
-<li>子类可以用自己的方式实现父类的方法。</li>
-</ol>
-<p>Java 的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，多重继承就是，例如 A 类继承 B 类，B 类继承 C 类，所以按照关系就是 C 类是 B 类的父类，B 类是 A 类的父类，这是 Java 继承区别于 C++ 继承的一个特性。</p>
-<h4 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> featureextend;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//以下是父类</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fatherclass</span></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	Fatherclass()&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">		System.out.println(<span class="string">"这是构造方法的输出"</span>);		<span class="comment">//构造方法:方法名与类名一致,可以有参数,可以方法重载,不能有return,没有void修饰</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">printastring</span><span class="params">(String str)</span> </span>&#123;		<span class="comment">//父类中的方法用default修饰的方法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">		System.out.println(str);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">printastring</span><span class="params">()</span> </span>&#123;		<span class="comment">//父类中的方法用default修饰的方法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">		System.out.println(<span class="string">"无参数的方法,即printastring的方法重载"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">printhello</span><span class="params">()</span> </span>&#123;		<span class="comment">//父类中用proteced修饰的父方法;protect修饰的可以用于子类</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">		System.out.println(<span class="string">"hello"</span>);		</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">		</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//以下是子类</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sonclass</span> <span class="keyword">extends</span> <span class="title">Fatherclass</span>  </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">sunsprint</span><span class="params">()</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">		System.out.println(<span class="string">"子类的方法"</span>);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Classextend</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">		Sonclass aobject=<span class="keyword">new</span> Sonclass();		<span class="comment">//这里会调用构造方法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">		aobject.printastring(<span class="string">"fatherprint"</span>);	<span class="comment">//程序26行new的是子对象,但是它继承了父对象的方法</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">		aobject.printastring();					<span class="comment">//同一个方法但不同参数的方法的重载 多态性</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">		aobject.printhello();					<span class="comment">//父类中用protected关键字修饰的方法是可以继承到子类的</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">		aobject.sunsprint();                    <span class="comment">//子类的方法也可以被调用</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line">	&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-
-
-<h3 id="3-多态性"><a href="#3-多态性" class="headerlink" title="3. 多态性"></a>3. 多态性</h3><p>方法重写是一种多态性的体现</p>
-<p>本例示例代码见我的github <a href="https://github.com/yangjinhaoaa/sdjzu_java_practice/githubjava-2019-10-8classfeature" target="_blank" rel="noopener">https://github.com/yangjinhaoaa/sdjzu_java_practice/githubjava-2019-10-8classfeature</a> 和java-2019-10-9classfeatureextend</p>
-
-		  	  
-	</div>
-
-
-
-	<div class="article-categories">
-	 
-	</div>
-	
-
-	<div class="article-tags">
-		
-	</div>
-
-	<div class="article-bottom">
-		<a class="readmore" href="/2019/10/08/2019_10_8blog1/">Continue</a> 	
-	</div>	
-    
-</article>
-
-	
-	
 
 	
 	
@@ -682,7 +668,7 @@ Mammalnt.java文件<pre><code class="java"><span class="keyword">public</span> <
         </a>
     
 
-   <span class="page-number"> Page <strong>3</strong>, Posts <strong>36</strong>. </span>
+   <span class="page-number"> Page <strong>3</strong>, Posts <strong>37</strong>. </span>
 
     
         <a class="next" href="/page/4/"> 

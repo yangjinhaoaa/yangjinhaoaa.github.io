@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   
   
-  <title>  PCM编码 |   博·览 </title>
+  <title>  使用Keil V5找不到设备(packs已经安装好) |   博·览 </title>
 
  
   
@@ -88,17 +88,17 @@
 	
 <div class="header">
 		<p class="title">	
-			PCM编码
+			使用keil v5找不到设备(packs已经安装好)
 		</p>
 		<div class="info">	
 			<time>
-				Nov 20, 2019
+				Dec 03, 2019
 			</time>
 
 			
 			
 				<i class="iconfont icon-words"></i>
-				<span class="words">196
+				<span class="words">536
 				</span>
 			
 		</div>
@@ -131,62 +131,18 @@
 		
 
 			
-					<h3 id="A律十三折线编码"><a href="#A律十三折线编码" class="headerlink" title="A律十三折线编码"></a>A律十三折线编码</h3><h4 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h4><ul>
-<li><p>按照A率十三折编码规范每个样值编为8bit二进制数据</p>
-</li>
-<li><p>采样率8KHz</p>
-</li>
-<li><p>小信号更细大信号更粗</p>
-<h4 id="极性码"><a href="#极性码" class="headerlink" title="极性码"></a>极性码</h4><p>正数是1,</p>
-<h4 id="段落码"><a href="#段落码" class="headerlink" title="段落码"></a>段落码</h4><p>c2,c3,c4 </p>
-<table>
-<thead>
-<tr>
-<th align="center">区间</th>
-<th align="center">c2,c3,c4</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">0</td>
-<td align="center">000</td>
-</tr>
-<tr>
-<td align="center">32</td>
-<td align="center">001</td>
-</tr>
-<tr>
-<td align="center">64</td>
-<td align="center">010</td>
-</tr>
-<tr>
-<td align="center">128</td>
-<td align="center">011</td>
-</tr>
-<tr>
-<td align="center">256</td>
-<td align="center">100</td>
-</tr>
-<tr>
-<td align="center">512</td>
-<td align="center">101</td>
-</tr>
-<tr>
-<td align="center">1024</td>
-<td align="center">110</td>
-</tr>
-<tr>
-<td align="center">2048</td>
-<td align="center">111</td>
-</tr>
-<tr>
-<td align="center">4096</td>
-<td align="center">—-</td>
-</tr>
-</tbody></table>
-</li>
+					<h2 id="keil-v5找不到设备"><a href="#keil-v5找不到设备" class="headerlink" title="keil v5找不到设备"></a>keil v5找不到设备</h2><a id="more"></a>
+
+<ul>
+<li>这几天做RFID实验,实验室的试验箱是stm32F103VC的芯片,可是发现我的电脑上的keil arm-mdk不能编译实验用的keil工程 .  发现是我的mdk没有stm32f103的库 . 那我就去包管理器里下载stm32f1xx的包吧 . 可是我下载并安装好之后,发现打开工程时还是找不到芯片,而且<strong>device manager中也找不到stm32f1xx系列的芯片包.</strong></li>
 </ul>
-<p>按照大于X取X</p>
-  	
+<p>这个问题困惑了我好长时间 , 也找了好多方法 . 后来在license manager中发现了端倪。 我的product中关于ARM的只有这一项,而这一项中只标明了cortex-M0的芯片,这句话就说明该mdk只允许用户开发关于M0芯片的程序。</p>
+<p><img src="/images/Snipaste_2019-12-03_22-42-10.jpg" alt="只有cortex m0的许可"></p>
+<p>其他芯片即便你安装了相关的packs它也是不支持的 . 看到这我恍然大悟。难怪当时stm32f0系列的包是能够安装上的因为f0系列也是m0的芯片呀<br>出现这原因我想是因为之前用的是stm32g0xx的芯片，所以安装的时候只考虑了该许可。</p>
+<h3 id="那问题就好说了去找个注册机然后将产品许可改成全系列的就可以了嘛"><a href="#那问题就好说了去找个注册机然后将产品许可改成全系列的就可以了嘛" class="headerlink" title="那问题就好说了去找个注册机然后将产品许可改成全系列的就可以了嘛"></a>那问题就好说了去找个注册机然后将产品许可改成全系列的就可以了嘛</h3><p>注册机在下方链接</p>
+<p>是到2023年的</p>
+<p><a href="https://pan.baidu.com/s/1nZvTPEbfS8FBbugnBVScdQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1nZvTPEbfS8FBbugnBVScdQ</a> 提取码:z8o3</p>
+<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2>  	
 					
 	  </div>     
 	  
@@ -198,7 +154,7 @@
 
       
       <i class="iconfont icon-tag"></i>
-      <a class="tag-link" href="/tags/%E9%80%9A%E4%BF%A1/" rel="tag">通信</a>
+      <a class="tag-link" href="/tags/stm32/" rel="tag">stm32</a>
       
     </div>
 
@@ -234,24 +190,16 @@
   <nav class="nav">
     <div class="link">
       
-      <a href="/2019/11/20/2019_11_20blog1/" class="link-wrap">
-        <strong class="caption">older</strong>
-        
-        <span class="title">
-          [RFID]RFID标签卡
-        </span>
-      </a>
-      
-    </div>
-    <div class="link">
-      
       <a href="/2019/12/01/hello-world/" class="link-wrap">
-        <strong class="caption">newer</strong>
+        <strong class="caption">older</strong>
         
         <span class="title">
           Hexo博客使用
         </span>
       </a>
+      
+    </div>
+    <div class="link">
       
     </div>
   </nav>
