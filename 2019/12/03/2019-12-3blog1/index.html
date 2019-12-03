@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   
   
-  <title>  Hexo博客使用 |   博·览 </title>
+  <title>  macOS下stm32开发环境的搭建 |   博·览 </title>
 
  
   
@@ -88,17 +88,17 @@
 	
 <div class="header">
 		<p class="title">	
-			Hexo博客使用
+			macOS下stm32开发环境的搭建
 		</p>
 		<div class="info">	
 			<time>
-				Dec 01, 2019
+				Dec 03, 2019
 			</time>
 
 			
 			
 				<i class="iconfont icon-words"></i>
-				<span class="words">222
+				<span class="words">466
 				</span>
 			
 		</div>
@@ -131,21 +131,20 @@
 		
 
 			
-					<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
-<h3 id="创建-new-post"><a href="#创建-new-post" class="headerlink" title="创建 new post"></a>创建 new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure>
-<h3 id="发送博客"><a href="#发送博客" class="headerlink" title="发送博客"></a>发送博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">hexo clean</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">hexo g</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">hexo d</span></pre></td></tr></table></figure>
-<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>图片放在source/images文件夹中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">![显示包内容](&#x2F;images&#x2F;截屏2019-12-03下午7.51.31.png)</span></pre></td></tr></table></figure>
-<h3 id="分割摘要和内容"><a href="#分割摘要和内容" class="headerlink" title="分割摘要和内容"></a>分割摘要和内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span></pre></td></tr></table></figure>
-<p>分割摘要和内容</p>
-<h3 id="写文章标签"><a href="#写文章标签" class="headerlink" title="写文章标签"></a>写文章标签</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">tags: stm32</span></pre></td></tr></table></figure>
-
-
-<h3 id="本地查看"><a href="#本地查看" class="headerlink" title="本地查看"></a>本地查看</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure>
-
-
-
-  	
+					<h2 id="MacOs中stm32开发环境的搭建"><a href="#MacOs中stm32开发环境的搭建" class="headerlink" title="MacOs中stm32开发环境的搭建"></a>MacOs中stm32开发环境的搭建</h2><a id="more"></a>
+<h3 id="安装stm32cubemx开发工具"><a href="#安装stm32cubemx开发工具" class="headerlink" title="安装stm32cubemx开发工具"></a>安装stm32cubemx开发工具</h3><ul>
+<li><p>从官网下载stm32cubemx安装包 . 注意经过我的测试发现当前最新的5.4.0版本是装不上去的,所以需要下载旧版本的包(5.2.0).该安装包是通用的既可以用于windows也可以用于macos的 . </p>
+</li>
+<li><p>下载好之后解压安装包看到有SetupSTM32CubeMX_v5-2-0.app的文件,<strong>不要直接双击 , 而是右击点显示包内容</strong></p>
+<p><img src="/images/%E6%88%AA%E5%B1%8F2019-12-03%E4%B8%8B%E5%8D%887.51.31.png" alt="显示包内容"></p>
+</li>
+<li><p>接着看到 , Contents目录下MacOs目录下有SetupSTM32CubeMX-5_2_0_macos文件,双击它就可以开始安装了,具体安装步骤不再赘述 .</p>
+<p><img src="/images/%E6%88%AA%E5%B1%8F2019-12-03%E4%B8%8B%E5%8D%887.54.24.png" alt="双击SetupSTM32CubeMX-5_2_0_macos"> </p>
+</li>
+</ul>
+<h3 id="stlink"><a href="#stlink" class="headerlink" title="stlink"></a>stlink</h3><p>在term中输入brew install stlink<br>stlink包含st-flash命令,可以用它来下载程序<br>st-flash write test.bin </p>
+<h3 id="coolTerm串口调试"><a href="#coolTerm串口调试" class="headerlink" title="coolTerm串口调试"></a>coolTerm串口调试</h3><p>(在/dev下也可以看到stlink可以在这里查看串口输出)<br>下载链接在这里<br><a href="http://freeware.the-meiers.org/CoolTermMac.zip" target="_blank" rel="noopener">http://freeware.the-meiers.org/CoolTermMac.zip</a></p>
+<h2 id="END"><a href="#END" class="headerlink" title="END"></a>END</h2>  	
 					
 	  </div>     
 	  
@@ -157,7 +156,7 @@
 
       
       <i class="iconfont icon-tag"></i>
-      <a class="tag-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a>
+      <a class="tag-link" href="/tags/stm32/" rel="tag">stm32</a>
       
     </div>
 
@@ -193,22 +192,22 @@
   <nav class="nav">
     <div class="link">
       
-      <a href="/2019/11/20/2019_11_20blog2/" class="link-wrap">
+      <a href="/2019/12/01/hello-world/" class="link-wrap">
         <strong class="caption">older</strong>
         
         <span class="title">
-          PCM编码
+          Hexo博客使用
         </span>
       </a>
       
     </div>
     <div class="link">
       
-      <a href="/2019/12/03/2019-12-3blog1/" class="link-wrap">
+      <a href="/2019/12/03/2019-12-3blog2/" class="link-wrap">
         <strong class="caption">newer</strong>
         
         <span class="title">
-          macOS下stm32开发环境的搭建
+          使用keil v5找不到设备(packs已经安装好)
         </span>
       </a>
       
