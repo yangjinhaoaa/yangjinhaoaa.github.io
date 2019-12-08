@@ -127,6 +127,63 @@
 	   
 	<div class="article-header">
 	    
+		<a class="title" href="/2019/11/07/2019_11_7blog2/">[Android]使用style封装xml属性</a>  
+	       
+		 
+
+		<div class="meta">
+			<time>Nov 07, 2019</time>			
+		</div>
+	</div>
+
+
+	
+
+    
+	<div class="typo article-excerpt">	
+		 
+			<h2 id="今天在改代码的时候算是明白了代码质量的重要性了"><a href="#今天在改代码的时候算是明白了代码质量的重要性了" class="headerlink" title="今天在改代码的时候算是明白了代码质量的重要性了"></a>今天在改代码的时候算是明白了代码质量的重要性了</h2><h3 id="我写的xml里面有几十个TextView控件-这些控件的属性都是相似的-所以就想到在xml文件中能不能将这些属性封装起来-然后挨个调用-一来改起来效率高-而来看起来也舒服-在网上查了下真的有这种方法"><a href="#我写的xml里面有几十个TextView控件-这些控件的属性都是相似的-所以就想到在xml文件中能不能将这些属性封装起来-然后挨个调用-一来改起来效率高-而来看起来也舒服-在网上查了下真的有这种方法" class="headerlink" title="我写的xml里面有几十个TextView控件,这些控件的属性都是相似的.所以就想到在xml文件中能不能将这些属性封装起来,然后挨个调用,一来改起来效率高,而来看起来也舒服. 在网上查了下真的有这种方法"></a>我写的xml里面有几十个TextView控件,这些控件的属性都是相似的.所以就想到在xml文件中能不能将这些属性封装起来,然后挨个调用,一来改起来效率高,而来看起来也舒服. 在网上查了下真的有这种方法</h3><p>具体方法就是:</p>
+<ul>
+<li>在value/style.xml文件中建立一个style<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">name</span> =<span class="string">"mystyle"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="xml">       <span class="tag">&lt;<span class="name">item</span> <span class="attr">name</span>=<span class="string">"android:textColor"</span>&gt;</span>"#003366"<span class="tag">&lt;/<span class="name">item</span>&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></pre></td></tr></table></figure></li>
+<li>然后在Activity.xml文件中引用这个style就行了<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/TextView1_5"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">style</span>=<span class="string">"@style/tvstyle"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">TextView</span>&gt;</span></span></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<p>这是原来的代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/TextView1_1"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">"1"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:gravity</span>=<span class="string">"center"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:textColor</span>=<span class="string">"#003366"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">TextView</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/TextView1_2"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">"1"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:gravity</span>=<span class="string">"center"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:textColor</span>=<span class="string">"#003366"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">TextView</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TextView</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:id</span>=<span class="string">"@+id/TextView1_3"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">"match_parent"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">"match_parent"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:layout_weight</span>=<span class="string">"1"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:gravity</span>=<span class="string">"center"</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line"><span class="tag">    <span class="attr">android:textColor</span>=<span class="string">"#003366"</span>&gt;</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;/<span class="name">TextView</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<p>使用后</p>
+
+		  	  
+	</div>
+
+
+
+	<div class="article-categories">
+	 
+	</div>
+	
+
+	<div class="article-tags">
+		
+	</div>
+
+	<div class="article-bottom">
+		<a class="readmore" href="/2019/11/07/2019_11_7blog2/">Continue</a> 	
+	</div>	
+    
+</article>
+
+	
+	
+	
+	
+
+<article class="article">		
+	   
+	<div class="article-header">
+	    
 		<a class="title" href="/2019/11/07/2019_11_7blog1/">[termux]安卓终端termux中安装jdk</a>  
 	       
 		 
@@ -601,53 +658,6 @@
 
 	
 	
-	
-	
-
-<article class="article">		
-	   
-	<div class="article-header">
-	    
-		<a class="title" href="/2019/10/17/2019_10_17blog1/">[工具]代码自动补充工具</a>  
-	       
-		 
-
-		<div class="meta">
-			<time>Oct 17, 2019</time>			
-		</div>
-	</div>
-
-
-	
-
-    
-	<div class="typo article-excerpt">	
-		 
-			<p>发现一个插件叫做tabnine可以根据你的输入习惯自动补全代码.</p>
-<h3 id="支持很多语言"><a href="#支持很多语言" class="headerlink" title="支持很多语言"></a>支持很多语言</h3><h3 id="支持很多IDE"><a href="#支持很多IDE" class="headerlink" title="支持很多IDE"></a>支持很多IDE</h3><p>链接<a href="https://tabnine.com/" target="_blank" rel="noopener">https://tabnine.com/</a></p>
-
-		  	  
-	</div>
-
-
-
-	<div class="article-categories">
-	 
-	</div>
-	
-
-	<div class="article-tags">
-		
-	</div>
-
-	<div class="article-bottom">
-		<a class="readmore" href="/2019/10/17/2019_10_17blog1/">Continue</a> 	
-	</div>	
-    
-</article>
-
-	
-	
 
 	
 	
@@ -660,7 +670,7 @@
         </a>
     
 
-   <span class="page-number"> Page <strong>2</strong>, Posts <strong>38</strong>. </span>
+   <span class="page-number"> Page <strong>2</strong>, Posts <strong>39</strong>. </span>
 
     
         <a class="next" href="/page/3/"> 
